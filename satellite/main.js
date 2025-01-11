@@ -1,6 +1,3 @@
-// 后端环境
-
-
 // 初始化 Cesium Viewe
 const viewer = new Cesium.Viewer('cesiumContainer', {
     terrainProvider: Cesium.createWorldTerrain(),
@@ -10,7 +7,7 @@ const viewer = new Cesium.Viewer('cesiumContainer', {
 });
 // 加载 CZML 文件
 const czmlDataSource = new Cesium.CzmlDataSource();
-czmlDataSource.load('satellites.czml').then(function() {
+czmlDataSource.load('satellite.czml').then(function() {
     viewer.dataSources.add(czmlDataSource);
     viewer.zoomTo(czmlDataSource);
 }).otherwise(function(error) {
